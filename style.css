@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: StarJedi;
+    src: url(starjedi/Starjedi.ttf);
+}
+
+@font-face {
+    font-family: StarJhol;
+    src: url(starjedi/Starjhol.ttf);
+}
+
+body {
+    background-image: url(images/fond.webp);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'StarJhol';
+    font-size: 2.5em;
+    text-transform: lowercase;
+    text-align: center;
+    color: rgb(255, 232, 32);
+    padding: 30px 0;
+}
+
+/* MENU */
+
+a {
+    text-decoration: none;
+    transition: all 0.5s ease;
+    color: black;
+}
+
+.item-menu {
+    color: black;
+}
+
+#films:hover, #films.selected {
+    color: rgb(125, 125, 125);
+}
+
+#people:hover, #people.selected {
+    color: rgb(182, 83, 237);
+}
+
+#starships:hover, #starships.selected {
+    color: rgb(59, 192, 192);
+}
+
+#planets:hover, #planets.selected {
+    color: rgb(254, 167, 36);
+}
+
+#species:hover, #species.selected {
+    color: rgb(109, 176, 89);
+}
+
+nav {
+    background-color: white;
+    color: black;
+    font-family: "StarJedi";
+    border-radius: 52px;
+    width: 80%;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+#menu li {
+    padding: 2% 5%;
+    list-style-type: none;
+    padding: 2% 5%;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: Calibri;
+    margin: 15px 166px;
+}
+
+#accueil {
+    font-weight: normal;
+    margin-top: 17vh;
+    padding: 15px;
+    text-align: center;
+}
+
+article {
+    background-color: white;
+    color: black;
+    width: 24vw;
+    height: 11.5vh;
+    text-align: center;
+    border-radius: 15px;
+    margin: 10px 5px;
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgba(255, 255, 255, 0);
+    /* transition: 0.4s ease border-color; */
+}
+
+/* CARDS */
+
+.card {
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    border-color: rgb(125, 125, 125);
+    /* transition: 0.4s ease border-color; */
+}
+
+.people-card:hover {
+    border-color: rgb(182, 83, 237);
+    /* transition: 0.4s ease border-color; */
+}
+
+.starship-card:hover {
+    border-color: rgb(59, 192, 192);
+    /* transition: 0.4s ease border-color; */
+}
+
+.planet-card:hover {
+    border-color: rgb(254, 167, 36);
+    /* transition: 0.4s ease border-color; */
+}
+
+.species-card:hover {
+    border-color: rgb(109, 176, 89);
+    /* transition: 0.4s ease border-color; */
+}
+
+.subtitle {
+    font-weight: normal;
+}
+
+/* SINGLE CARD */
+
+.single-element {
+    width: 77vw;
+    padding: 25px 15px;
+    height: auto;
+    justify-content: normal;
+}
+
+.movie {
+    border: 5px solid rgb(125, 125, 125);
+    text-align: left;
+}
+
+.film-color {
+    color: rgb(125, 125, 125);
+    /* transition: 0.4s ease border-color; */
+}
+
+.character {
+    border: 5px solid rgb(182, 83, 237);
+}
+
+.character-color {
+    color: rgb(182, 83, 237);
+}
+
+.starship {
+    border: 5px solid rgb(59, 192, 192);
+}
+
+.starship-color {
+    color: rgb(59, 192, 192);
+}
+
+.planet {
+    border: 5px solid rgb(254, 167, 36);
+}
+
+.planet-color {
+    color: rgb(254, 167, 36);
+}
+
+.species {
+    border: 5px solid rgb(109, 176, 89);
+}
+
+.species-color {
+    color: rgb(109, 176, 89);
+}
+
+.title, .name {
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.margin-p {
+    margin: 10px 0;
+}
+
+.text {
+    font-weight: normal;
+}
+
+/* ARROWS */
+
+.button {
+    width: 8vw;
+    height: 8vh;
+    cursor: pointer;
+    border: 5px solid rgba(255, 255, 255, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.button:hover {
+    border-color: rgb(255, 232, 32);
+}
+
+#left {
+    margin-left: 29vw;
+}
+
+#right {
+    margin-left: 3vw;
+}
