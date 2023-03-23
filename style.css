@@ -19,15 +19,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 h1 {
     font-family: 'StarJhol';
     font-size: 2.5em;
     text-transform: lowercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: rgb(255, 232, 32);
     padding: 30px 0;
+    width: 100%;
+    height: 6vh;
 }
 
 /* MENU */
@@ -63,18 +70,24 @@ a {
 }
 
 nav {
-    background-color: white;
-    color: black;
-    font-family: "StarJedi";
-    border-radius: 52px;
-    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 82%;
+    height: 14vh;
 }
 
 #menu {
     display: flex;
     flex-direction: row;
-    text-align: center;
     justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-family: "StarJedi";
+    border-radius: 52px;
+    width: 100%;
+    height: 66%;
 }
 
 #menu li {
@@ -87,27 +100,31 @@ nav {
 section {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     font-family: Calibri;
-    margin: 15px 166px;
+    width: 80%;
+    height: 80vh;
+}
+
+.movies {
+    height: 40vh;
 }
 
 #accueil {
     font-weight: normal;
-    margin-top: 17vh;
     padding: 15px;
     text-align: center;
+    height: 11vh;
+    margin-top: -25vh;
 }
 
 article {
     background-color: white;
     color: black;
     width: 24vw;
-    height: 11.5vh;
     text-align: center;
     border-radius: 15px;
-    margin: 10px 5px;
-    padding: 8px 0;
     font-weight: bold;
     font-size: 1.2em;
     display: flex;
@@ -122,6 +139,8 @@ article {
 
 .card {
     cursor: pointer;
+    flex: 0 0 30%;
+    height: 14vh;
 }
 
 .movie-card:hover {

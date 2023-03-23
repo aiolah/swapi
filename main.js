@@ -265,25 +265,28 @@ function suppressSingleElement()
  */
 function generateMoviesCards(dataJSON)
 {
-     let movies = [];
-     for(i = 0; i<dataJSON.results.length; i++)
-     {
-         let movie = new Movie(dataJSON.results[i]);
-         movies.push(movie);
-     }
-     movies.forEach(element => {
-            let article = document.createElement("article");
-            article.addEventListener("click", (_) => showOneMovie(element));
-            article.classList.add("card");
-            article.classList.add("movie-card");
-            article.innerText = element.title;
-            article.innerHTML += "<p class='film-color'>" + determineEpisodeNumber(element);  + "</p>";
-            document.querySelector("section").appendChild(article);
-    })
-     // Suppression des flèches pour qu'elle se regénère bien
-     document.querySelectorAll(".button").forEach(child => {
-         document.querySelector("section").removeChild(child);
-     });
+    let movies = [];
+    for(i = 0; i<dataJSON.results.length; i++)
+    {
+        let movie = new Movie(dataJSON.results[i]);
+        movies.push(movie);
+    }
+    // Pour bien afficher les cartes des movies
+    document.querySelector("section").classList.add("movies");
+    
+    movies.forEach(element => {
+        let article = document.createElement("article");
+        article.addEventListener("click", (_) => showOneMovie(element));
+        article.classList.add("card");
+        article.classList.add("movie-card");
+        article.innerText = element.title;
+        article.innerHTML += "<p class='film-color'>" + determineEpisodeNumber(element);  + "</p>";
+        document.querySelector("section").appendChild(article);
+})
+    // Suppression des flèches pour qu'elle se regénère bien
+    document.querySelectorAll(".button").forEach(child => {
+        document.querySelector("section").removeChild(child);
+    });
 }
 
 /**
@@ -397,6 +400,8 @@ function generatePeopleCards(dataJSON)
         let character = new Character(dataJSON.results[i]);
         characters.push(character);
     }
+    document.querySelector("section").classList.remove("movies");
+
     characters.forEach(element => {
         let article = document.createElement("article");
         article.addEventListener("click", (_) => showOneCharacter(element));
@@ -545,6 +550,8 @@ function generateStarshipsCards(dataJSON)
         let starship = new Starship(dataJSON.results[i]);
         starships.push(starship);
     }
+    document.querySelector("section").classList.remove("movies");
+
     starships.forEach(element => {
         let article = document.createElement("article");
         article.addEventListener("click", (_) => showOneStarship(element));
@@ -654,6 +661,8 @@ function generatePlanetsCards(dataJSON)
         let planet = new Planet(dataJSON.results[i]);
         planets.push(planet);
     }
+    document.querySelector("section").classList.remove("movies");
+
     planets.forEach(element => {
         let article = document.createElement("article");
         article.addEventListener("click", (_) => showOnePlanet(element));
@@ -741,6 +750,8 @@ function generateSpeciesCards(dataJSON)
         let species = new Species(dataJSON.results[i]);
         speciess.push(species);
     }
+    document.querySelector("section").classList.remove("movies");
+
     speciess.forEach(element => {
         let article = document.createElement("article");
         article.addEventListener("click", (_) => showOneSpecies(element));
