@@ -97,6 +97,78 @@ nav {
     justify-content: center;
 }
 
+/* MENU BURGER */
+
+#menu-burger, #menu-burger-cross {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+    h1 {
+        height: auto;
+        font-size: 2em;
+    }
+
+    body {
+        width: 100vw;
+    }
+
+    nav {
+        min-height: 37px;
+        height: auto;
+        width: 100vw;
+    }
+
+    #menu {
+        height: 104%;
+    }
+
+    #menu li {
+        display: none;
+    }
+
+    #menu.open {
+        display: flex;
+        flex-direction: column;
+        height: 20vh;
+        border-radius: 32px;
+    }
+
+    #menu.open li {
+        display: block;
+        padding: 3px;
+    }
+
+    nav ul.open li {
+        padding-bottom: 5px;
+    }
+
+    .menu-icons {
+        width: 35px;
+    }
+
+    #menu-burger, #menu-burger-cross {
+        position: absolute;
+        top: 19vh;
+        right: 0;
+        margin: 1px 7px;
+    }
+
+    .iconActive {
+        display: block !important;
+    }
+
+    .iconNonActive {
+        display: none !important;
+    }
+
+    #accueil {
+        height: 18vh !important;
+    }
+
+}
+
 section {
     display: flex;
     flex-wrap: wrap;
