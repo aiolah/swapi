@@ -272,7 +272,7 @@ function generateMoviesCards(dataJSON)
         movies.push(movie);
     }
     // Pour bien afficher les cartes des movies
-    document.querySelector("section").classList.add("movies");
+    document.querySelector("section").classList.add("cards");
     
     movies.forEach(element => {
         let article = document.createElement("article");

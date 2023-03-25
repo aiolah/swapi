@@ -97,78 +97,6 @@ nav {
     justify-content: center;
 }
 
-/* MENU BURGER */
-
-#menu-burger, #menu-burger-cross {
-    display: none;
-}
-
-@media screen and (max-width: 480px) {
-
-    h1 {
-        height: auto;
-        font-size: 2em;
-    }
-
-    body {
-        width: 100vw;
-    }
-
-    nav {
-        min-height: 37px;
-        height: auto;
-        width: 100vw;
-    }
-
-    #menu {
-        height: 104%;
-    }
-
-    #menu li {
-        display: none;
-    }
-
-    #menu.open {
-        display: flex;
-        flex-direction: column;
-        height: 20vh;
-        border-radius: 32px;
-    }
-
-    #menu.open li {
-        display: block;
-        padding: 3px;
-    }
-
-    nav ul.open li {
-        padding-bottom: 5px;
-    }
-
-    .menu-icons {
-        width: 35px;
-    }
-
-    #menu-burger, #menu-burger-cross {
-        position: absolute;
-        top: 19vh;
-        right: 0;
-        margin: 1px 7px;
-    }
-
-    .iconActive {
-        display: block !important;
-    }
-
-    .iconNonActive {
-        display: none !important;
-    }
-
-    #accueil {
-        height: 18vh !important;
-    }
-
-}
-
 section {
     display: flex;
     flex-wrap: wrap;
@@ -330,4 +258,108 @@ article {
 
 #right {
     margin-left: 3vw;
+}
+
+/* MENU BURGER */
+
+#menu-burger, #menu-burger-cross {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+    h1 {
+        height: auto;
+        font-size: 2em;
+    }
+
+    body {
+        width: 100vw;
+    }
+
+    nav {
+        height: 5vh;
+        width: 100vw;
+        margin-bottom: 3vh;
+    }
+
+    nav.open {
+        height: 20vh;
+    }
+
+    #menu {
+        height: 100%;
+        flex-direction: row;
+    }
+
+    #menu li {
+        display: none;
+    }
+
+    #menu.open {
+        display: flex;
+        border-radius: 32px;
+    }
+
+    #menu.open li {
+        display: block;
+        padding: 3px;
+    }
+
+    nav ul.open li {
+        padding-bottom: 5px;
+    }
+
+    .menu-icons {
+        width: 35px;
+    }
+
+    .icons-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        height: 90%;
+    }
+
+    .items-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+        margin-left: 10%;
+    }
+
+    #menu-burger, #menu-burger-cross {
+        margin: 1px 7px;
+    }
+
+    .iconActive {
+        display: block !important;
+    }
+
+    .iconNonActive {
+        display: none !important;
+    }
+
+    #accueil {
+        position: absolute;
+        top: calc(50vh - 5.5vh);
+        width: 39vw;
+        height: 13vh;
+        margin: 0;
+    }
+
+    section {
+        row-gap: 3vh;
+        height: auto;
+        padding-bottom: 3vh;
+    }
+
+    .card {
+        flex: 0 0 100%;
+    }
+
 }
